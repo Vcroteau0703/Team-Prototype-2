@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Coffee
+  - Phone
   layers:
   - Default
   - TransparentFX

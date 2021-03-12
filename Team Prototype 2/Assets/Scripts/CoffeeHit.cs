@@ -5,14 +5,13 @@ using UnityEngine;
 public class CoffeeHit : MonoBehaviour
 {
 
-    public GameObject coffee;
-
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if(coffee)
+        if (other.gameObject.CompareTag("Coffee"))
         {
             Debug.Log("spill");
-            other.gameObject.GetComponent<AudioSource>().Play();
+            gameObject.GetComponent<AudioSource>().Play();
+            other.gameObject.SetActive(false);
         }
     }
 

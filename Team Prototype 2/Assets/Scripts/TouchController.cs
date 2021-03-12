@@ -13,6 +13,10 @@ public class TouchController : MonoBehaviour
 
     public GameObject lastCoffee;
 
+    public AudioClip trashMusic;
+
+    bool changeRadio;
+
 
     void Awake()
     {
@@ -62,11 +66,21 @@ public class TouchController : MonoBehaviour
                     Debug.Log("You hit Coffee");
                 }
 
+                if (!changeRadio)
+                {
+                    if (hit.collider.tag == "Phone")
+                    {
+                        hit.collider.gameObject.GetComponent<AudioSource>().clip = trashMusic;
+                        hit.collider.gameObject.GetComponent<AudioSource>().Play();
+                        changeRadio = true;
+                    }
+                }
+                
 
                 GameObject coffee = hit.transform.gameObject;
                 if(coffee != null)
                 {
-                    lastCoffee = coffee;
+                    //lastCoffee = coffee;
                     InitDrag();
                 }
             }
