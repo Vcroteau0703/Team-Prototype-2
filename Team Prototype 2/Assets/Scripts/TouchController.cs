@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TouchController : MonoBehaviour
 {
+    public Slider slider;
 
     private bool dragActive = false;
 
@@ -72,6 +74,7 @@ public class TouchController : MonoBehaviour
                     {
                         hit.collider.gameObject.GetComponent<AudioSource>().clip = trashMusic;
                         hit.collider.gameObject.GetComponent<AudioSource>().Play();
+                        slider.value += 40;
                         changeRadio = true;
                     }
                 }
