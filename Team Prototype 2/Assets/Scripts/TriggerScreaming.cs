@@ -7,6 +7,7 @@ public class TriggerScreaming : MonoBehaviour
 {
     Slider slider;
     AudioSource audioSource;
+    public GameObject cop;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class TriggerScreaming : MonoBehaviour
         if(slider.value >= slider.maxValue)
         {
             audioSource.Play();
+            cop.SetActive(true);
             slider.value = 0;
         }
     }
