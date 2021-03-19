@@ -9,10 +9,14 @@ public class CarLight : MonoBehaviour
     public GameObject light;
     public Slider roadRageSlider;
     AudioSource audioSource;
+    public Sprite bgLightOff;
+    public Sprite bgLightOn;
+    SpriteRenderer bg;
 
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        bg = GetComponent<SpriteRenderer>();
     }
 
     public void ControlLights()
@@ -21,6 +25,7 @@ public class CarLight : MonoBehaviour
         {
             light.SetActive(false);
             lightOn = false;
+            bg.sprite = bgLightOff;
             audioSource.Play();
             roadRageSlider.value += 10;
         }
@@ -28,6 +33,7 @@ public class CarLight : MonoBehaviour
         {
             light.SetActive(true);
             lightOn = true;
+            bg.sprite = bgLightOn;
             audioSource.Play();
             roadRageSlider.value += 10;
         }
