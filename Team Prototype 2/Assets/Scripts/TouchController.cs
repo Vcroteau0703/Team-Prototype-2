@@ -15,7 +15,9 @@ public class TouchController : MonoBehaviour
 
     public AudioClip trashMusic;
 
-    bool changeRadio;
+    public bool changeRadio;
+
+    RadioManager radioManager;
 
 
     void Awake()
@@ -25,6 +27,8 @@ public class TouchController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        radioManager = GameObject.Find("Radio Manager").GetComponent<RadioManager>();
     }
 
     void Update()
@@ -54,37 +58,52 @@ public class TouchController : MonoBehaviour
 
         if (dragActive)
         {
-            Drag();
+            //Drag();
         }
+
         else
         {
             RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
             if(hit.collider != null)
             {
-                if(hit.collider.tag == "Coffee")
+                /*if(hit.collider.tag == "Coffee")
                 {
                     Debug.Log("You hit Coffee");
-                }
+                }*/
 
-                if (!changeRadio)
+                if (hit.collider.tag == "Phone")
                 {
-                    if (hit.collider.tag == "Phone")
+                    if (changeRadio)
                     {
-                        hit.collider.gameObject.GetComponent<AudioSource>().clip = trashMusic;
-                        hit.collider.gameObject.GetComponent<AudioSource>().Play();
+                        changeRadio = false;
+                    } 
+                    else if (!changeRadio)
+                    {
                         changeRadio = true;
                     }
                 }
                 
-
+                /*
                 GameObject coffee = hit.transform.gameObject;
                 if(coffee != null)
                 {
                     //lastCoffee = coffee;
                     InitDrag();
                 }
+                */
             }
         }
+        //Changes Radio Station
+        if (!changeRadio)
+        {
+            radioManager.radioStations[0].mute = !radioManager.radioStations[0].mute;
+            radioManager.radioStations[1].mute = !radioManager.radioStations[1].mute;
+        } 
+        else if (changeRadio)
+        {
+            //radioManager.radioStations[0].mute = !radioManager.radioStations[0].mute;
+        }
+
     }
 
     void InitDrag()
