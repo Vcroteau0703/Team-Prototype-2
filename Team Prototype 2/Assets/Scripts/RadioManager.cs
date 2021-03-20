@@ -14,4 +14,10 @@ public class RadioManager : MonoBehaviour
 
         radioStations[1].mute = !radioStations[1].mute;
     }
+
+    public void RadioChangePress()
+    {
+        radioStations[0].mute = !radioStations[0].mute;
+        radioStations[1].mute = !radioStations[1].mute;
+    }
 }

@@ -94,6 +94,7 @@ public class TouchController : MonoBehaviour
             }
         }
         //Changes Radio Station
+        /*
         if (!changeRadio)
         {
             radioManager.radioStations[0].mute = !radioManager.radioStations[0].mute;
@@ -103,7 +104,7 @@ public class TouchController : MonoBehaviour
         {
             //radioManager.radioStations[0].mute = !radioManager.radioStations[0].mute;
         }
-
+        */
     }
 
     void InitDrag()
