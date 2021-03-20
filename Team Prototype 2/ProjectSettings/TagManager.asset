@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coffee
   - Phone
+  - Drag
   layers:
   - Default
   - TransparentFX

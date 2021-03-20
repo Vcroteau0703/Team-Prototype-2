@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TouchController : MonoBehaviour
 {
+    public Slider slider;
 
     private bool dragActive = false;
 
@@ -11,7 +13,7 @@ public class TouchController : MonoBehaviour
 
     Vector3 worldPosition;
 
-    public GameObject lastCoffee;
+    public GameObject selectedObject;
 
     public AudioClip trashMusic;
 
@@ -63,7 +65,13 @@ public class TouchController : MonoBehaviour
             {
                 if(hit.collider.tag == "Drag")
                 {
-                    Debug.Log("You hit Coffee");
+                    Debug.Log("You hit draggable object");
+                    selectedObject = hit.transform.gameObject;
+                    if (selectedObject != null)
+                    {
+                        //lastCoffee = coffee;
+                        InitDrag();
+                    }
                 }
 
                 if (!changeRadio)
@@ -72,17 +80,11 @@ public class TouchController : MonoBehaviour
                     {
                         hit.collider.gameObject.GetComponent<AudioSource>().clip = trashMusic;
                         hit.collider.gameObject.GetComponent<AudioSource>().Play();
+                        slider.value += 40;
                         changeRadio = true;
                     }
                 }
-                
 
-                GameObject coffee = hit.transform.gameObject;
-                if(coffee != null)
-                {
-                    //lastCoffee = coffee;
-                    InitDrag();
-                }
             }
         }
     }
@@ -94,7 +96,7 @@ public class TouchController : MonoBehaviour
 
     void Drag()
     {
-        lastCoffee.transform.position = new Vector2(worldPosition.x, worldPosition.y);
+        selectedObject.transform.position = new Vector3(worldPosition.x, worldPosition.y, -3.25f);
     }
 
     void Drop()
