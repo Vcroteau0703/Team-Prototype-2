@@ -22,7 +22,7 @@ public class TriggerScreaming : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        if(timer <= 0)
+        if(timer <= 0 && roboEmote != "sad")
         {
             timer = 2f;
             slider.value -= 5;
@@ -34,12 +34,12 @@ public class TriggerScreaming : MonoBehaviour
             robo.SetTrigger("sad");
             roboEmote = "sad";
         }
-        if(slider.value >= 100 && roboEmote != "mad")
+        if(slider.value >= 100 && roboEmote != "mad" && roboEmote != "sad")
         {
             robo.SetTrigger("mad");
             roboEmote = "mad";
         }
-        if(slider.value <= 100 && roboEmote != "happy")
+        if(slider.value < 100 && roboEmote != "happy")
         {
             robo.SetTrigger("happy");
             roboEmote = "happy";
