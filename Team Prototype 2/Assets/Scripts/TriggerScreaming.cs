@@ -10,7 +10,7 @@ public class TriggerScreaming : MonoBehaviour
     public GameObject cop;
     public Animator robo;
     float timer = 2f;
-    string roboEmote = "happy";
+    public string roboEmote = "happy";
     // Start is called before the first frame update
     void Start()
     {
@@ -22,19 +22,17 @@ public class TriggerScreaming : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        if(timer <= 0 && roboEmote != "sad")
+        if(timer <= 0)
         {
             timer = 2f;
             slider.value -= 5;
         }
-        if(slider.value >= slider.maxValue && roboEmote != "sad")
+        if(slider.value >= slider.maxValue)
         {
             audioSource.Play();
             cop.SetActive(true);
-            robo.SetTrigger("sad");
-            roboEmote = "sad";
         }
-        if(slider.value >= 100 && roboEmote != "mad" && roboEmote != "sad")
+        if(slider.value >= 100 && roboEmote != "mad")
         {
             robo.SetTrigger("mad");
             roboEmote = "mad";

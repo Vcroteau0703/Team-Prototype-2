@@ -6,14 +6,22 @@ using UnityEngine.UI;
 public class CoffeeHit : MonoBehaviour
 {
     public Slider slider;
-    public Animator coffee;
+    public Animator robo;
+    public TriggerScreaming triggerScreaming;
+
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Coffee"))
+        if (other.gameObject.CompareTag("Drag"))
         {
             Debug.Log("spill");
-            coffee.SetTrigger("hitdude");
-            gameObject.GetComponent<AudioSource>().Play();
+            if(other.gameObject.name == "Coffe cup")
+            {
+                Animator coffee = other.gameObject.GetComponent<Animator>();
+                coffee.SetTrigger("hitdude");
+            }
+            robo.SetTrigger("sad");
+            triggerScreaming.roboEmote = "sad";
+            other.gameObject.GetComponent<AudioSource>().Play();
             slider.value += 30;
         }
     }

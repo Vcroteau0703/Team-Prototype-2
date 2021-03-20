@@ -13,7 +13,7 @@ public class TouchController : MonoBehaviour
 
     Vector3 worldPosition;
 
-    public GameObject lastCoffee;
+    public GameObject selectedObject;
 
     public AudioClip trashMusic;
 
@@ -65,10 +65,9 @@ public class TouchController : MonoBehaviour
             {
                 if(hit.collider.tag == "Drag")
                 {
-                    Debug.Log("You hit Coffee");
-                    GameObject coffee = hit.transform.gameObject;
-
-                    if (coffee != null)
+                    Debug.Log("You hit draggable object");
+                    selectedObject = hit.transform.gameObject;
+                    if (selectedObject != null)
                     {
                         //lastCoffee = coffee;
                         InitDrag();
@@ -97,7 +96,7 @@ public class TouchController : MonoBehaviour
 
     void Drag()
     {
-        lastCoffee.transform.position = new Vector2(worldPosition.x, worldPosition.y);
+        selectedObject.transform.position = new Vector3(worldPosition.x, worldPosition.y, -3.25f);
     }
 
     void Drop()
