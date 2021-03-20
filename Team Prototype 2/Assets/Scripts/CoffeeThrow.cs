@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class CoffeeThrow : MonoBehaviour
 {
 
-
+    public void DestroyCup()
+    {
+        gameObject.SetActive(false);
+    }
    
 }
 

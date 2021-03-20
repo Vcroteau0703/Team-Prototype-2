@@ -66,6 +66,13 @@ public class TouchController : MonoBehaviour
                 if(hit.collider.tag == "Coffee")
                 {
                     Debug.Log("You hit Coffee");
+                    GameObject coffee = hit.transform.gameObject;
+
+                    if (coffee != null)
+                    {
+                        //lastCoffee = coffee;
+                        InitDrag();
+                    }
                 }
 
                 if (!changeRadio)
@@ -78,14 +85,7 @@ public class TouchController : MonoBehaviour
                         changeRadio = true;
                     }
                 }
-                
 
-                GameObject coffee = hit.transform.gameObject;
-                if(coffee != null)
-                {
-                    //lastCoffee = coffee;
-                    InitDrag();
-                }
             }
         }
     }
