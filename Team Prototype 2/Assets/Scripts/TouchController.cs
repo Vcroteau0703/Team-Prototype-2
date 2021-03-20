@@ -63,7 +63,7 @@ public class TouchController : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
             if(hit.collider != null)
             {
-                if(hit.collider.tag == "Coffee")
+                if(hit.collider.tag == "Drag")
                 {
                     Debug.Log("You hit Coffee");
                     GameObject coffee = hit.transform.gameObject;
