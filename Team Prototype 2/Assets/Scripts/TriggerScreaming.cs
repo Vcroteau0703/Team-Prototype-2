@@ -30,7 +30,7 @@ public class TriggerScreaming : MonoBehaviour
         if(slider.value >= slider.maxValue && roboEmote != "supermad")
         {
             roboEmote = "supermad";
-            robo.SetTrigger("supermad");
+            robo.SetBool("supermad", true);
             audioSource.Play();
             cop.SetActive(true);
 
