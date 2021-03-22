@@ -311,7 +311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
-  coffee: {fileID: 0}
+  robo: {fileID: 0}
+  triggerScreaming: {fileID: 0}
 --- !u!1 &29168867
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,7 +427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
-  lastCoffee: {fileID: 703248283}
+  selectedObject: {fileID: 0}
   trashMusic: {fileID: 8300000, guid: 2199ee1de7fe8e34c9d913812d315f9c, type: 3}
 --- !u!4 &58364702
 Transform:
@@ -844,12 +845,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555144212}
   m_CullTransparentMesh: 0
---- !u!1 &703248283 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4186753922848517893, guid: bf9ca51a19770464fab56afe9d30118b,
-    type: 3}
-  m_PrefabInstance: {fileID: 4186753922166249630}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &703248287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4186753922848517889, guid: bf9ca51a19770464fab56afe9d30118b,
