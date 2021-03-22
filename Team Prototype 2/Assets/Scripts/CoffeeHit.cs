@@ -7,7 +7,6 @@ public class CoffeeHit : MonoBehaviour
 {
     public Slider slider;
     public Animator robo;
-    public TriggerScreaming triggerScreaming;
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -20,7 +19,6 @@ public class CoffeeHit : MonoBehaviour
                 coffee.SetTrigger("hitdude");
             }
             robo.SetTrigger("sad");
-            triggerScreaming.roboEmote = "sad";
             other.gameObject.GetComponent<AudioSource>().Play();
             slider.value += 30;
         }

@@ -22,19 +22,20 @@ public class TriggerScreaming : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        if(timer <= 0 && roboEmote != "supermad")
+        if(timer <= 0 && slider.value != slider.maxValue)
         {
             timer = 2f;
             slider.value -= 5;
         }
         if(slider.value >= slider.maxValue && roboEmote != "supermad")
         {
+            roboEmote = "supermad";
             robo.SetTrigger("supermad");
             audioSource.Play();
             cop.SetActive(true);
-            roboEmote = "supermad";
+
         }
-        if(slider.value >= 100 && roboEmote != "mad" && roboEmote != "supermad")
+        if(slider.maxValue > slider.value && slider.value >= 100 && roboEmote != "mad")
         {
             robo.SetTrigger("mad");
             roboEmote = "mad";
