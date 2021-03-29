@@ -12,7 +12,7 @@ public class TemperatureSlider : MonoBehaviour
     public float seatHeat;
     public int maxHeat = 100;
     public bool seatOn;
-    public Text seatHeatUI;
+    //public Text seatHeatUI;
     public Slider seatHeatSlider;
 
     public Slider stressSlider;
@@ -81,21 +81,19 @@ public class TemperatureSlider : MonoBehaviour
         temperature -= 1;
     }
 
-    /*
+    
     public void SeatHeatPress()
     {
         if (seatOn)
         {
             seatOn = false;
-            seatHeatUI.text = "Seat Heat: Off";
         } 
         else if (!seatOn)
         {
             seatOn = true;
-            seatHeatUI.text = "Seat Heat: On";
         }
     }
-    */
+    
 
     public void SetMaxHeat(int heat)
     {
