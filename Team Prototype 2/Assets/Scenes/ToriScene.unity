@@ -4577,8 +4577,9 @@ MonoBehaviour:
   seatHeat: 0
   maxHeat: 100
   seatOn: 0
-  seatHeatUI: {fileID: 0}
   seatHeatSlider: {fileID: 1963912471}
+  stressSlider: {fileID: 1820150310}
+  timer: 0
 --- !u!1001 &6857292031319712951
 PrefabInstance:
   m_ObjectHideFlags: 0
