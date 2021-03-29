@@ -12,12 +12,9 @@ public class CoffeeHit : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Drag"))
         {
-            Debug.Log("spill");
-            if(other.gameObject.name == "Coffe cup")
-            {
-                Animator coffee = other.gameObject.GetComponent<Animator>();
-                coffee.SetTrigger("hitdude");
-            }
+            Animator coffee = other.gameObject.GetComponent<Animator>();
+            coffee.SetTrigger("hitdude");
+
             robo.SetTrigger("sad");
             other.gameObject.GetComponent<AudioSource>().Play();
             slider.value += 30;
