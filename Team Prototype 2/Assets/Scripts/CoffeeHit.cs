@@ -20,5 +20,4 @@ public class CoffeeHit : MonoBehaviour
             slider.value += 30;
         }
     }
-
 }

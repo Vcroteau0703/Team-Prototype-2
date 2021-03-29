@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ToriScene.unity
+    guid: 161d9a92a4cb9a944be4ccca9719969b
   m_configObjects: {}
