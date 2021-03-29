@@ -15,7 +15,10 @@ public class TemperatureSlider : MonoBehaviour
     public Text seatHeatUI;
     public Slider seatHeatSlider;
 
-    // Start is called before the first frame update
+    public Slider stressSlider;
+
+    public float timer;
+
     void Start()
     {
         SetMaxHeat(maxHeat);
@@ -29,6 +32,7 @@ public class TemperatureSlider : MonoBehaviour
         if(temperature > 80)
         {
             Debug.Log("TOO HOT!!!");
+            stressSlider.value += 1f;
         } 
         else if(temperature < 20)
         {
@@ -77,6 +81,7 @@ public class TemperatureSlider : MonoBehaviour
         temperature -= 1;
     }
 
+    /*
     public void SeatHeatPress()
     {
         if (seatOn)
@@ -90,6 +95,7 @@ public class TemperatureSlider : MonoBehaviour
             seatHeatUI.text = "Seat Heat: On";
         }
     }
+    */
 
     public void SetMaxHeat(int heat)
     {
