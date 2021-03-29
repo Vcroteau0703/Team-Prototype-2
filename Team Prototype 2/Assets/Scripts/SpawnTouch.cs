@@ -6,19 +6,19 @@ using UnityEngine.UI;
 public class SpawnTouch : MonoBehaviour
 {
     [SerializeField]
-    private Image[] Prefabs;
+    private GameObject[] Prefabs;
 
     private int randomPrefab;
     public Transform Spawn;
-    public Transform Canvas;
+    public Transform frontview;
 
     // Update is called once per frame
     public void LunchBox() {
         Debug.Log("Start");
-        randomPrefab = Random.Range(0, 5);
+        randomPrefab = Random.Range(0, Prefabs.Length);
         Debug.Log(randomPrefab);
-        Image FoodSpawn = Instantiate(Prefabs[randomPrefab], Spawn.position, Quaternion.identity) as Image;
-        FoodSpawn.transform.SetParent(Canvas.transform);
+        Instantiate(Prefabs[randomPrefab], Spawn.position, Quaternion.identity, frontview);
+      
 
         Debug.Log("instantiate object");
     }

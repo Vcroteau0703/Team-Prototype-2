@@ -165,8 +165,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5958b7cbfceb7ee4bb27b350fc04ef2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  slider: {fileID: 0}
+  robo: {fileID: 0}
+  triggerScreaming: {fileID: 0}
+--- !u!1 &29168867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 29168870}
+  - component: {fileID: 29168869}
+  - component: {fileID: 29168868}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &29168868
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29168867}
+  m_Enabled: 1
+--- !u!20 &29168869
+Camera:
+=======
 --- !u!108 &1843936
 Light:
+>>>>>>> master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -798,7 +832,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281483618}
   m_CullTransparentMesh: 0
+<<<<<<< HEAD
+--- !u!4 &703248287 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4186753922848517889, guid: bf9ca51a19770464fab56afe9d30118b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4186753922166249630}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &725992467
+=======
 --- !u!1 &355742654
+>>>>>>> master
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
