@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8624052972473878707}
   - component: {fileID: 8624052972473878704}
   m_Layer: 0
-  m_Name: Coffe cup 1
+  m_Name: CoffeeCupFinished
   m_TagString: Drag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 2293383891031506365, guid: 2dd49b29665b9b441a0324f4be638021,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
