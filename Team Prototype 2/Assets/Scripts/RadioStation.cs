@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RadioStation : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class RadioStation : MonoBehaviour
     public int randomIndexSongs;
     public int randomIndexHints;
 
+    public Text songText;
+    RadioManager radioManager;
+
     void Start()
     {
         audioSource = gameObject.GetComponent<AudioSource>();
@@ -25,6 +29,17 @@ public class RadioStation : MonoBehaviour
         audioSource.clip = audioHints[randomIndexHints];
 
         StartCoroutine(AudioPlaySequence());
+
+        radioManager = gameObject.GetComponentInParent<RadioManager>();
+    }
+
+    void Update()
+    {
+        if(audioSource.clip == audioSongs[randomIndexSongs])
+        {
+            songText.text = audioSource.clip.name;
+            Debug.Log("is it wokring?");
+        }
     }
 
     IEnumerator AudioPlaySequence()
