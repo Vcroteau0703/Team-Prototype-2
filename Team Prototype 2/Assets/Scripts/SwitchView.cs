@@ -13,6 +13,7 @@ public class SwitchView : MonoBehaviour
     public Image fill;
     public Button carSeat;
     public GameObject heatImage;
+    public Button backpack; 
 
     private void Awake()
     {
@@ -30,6 +31,7 @@ public class SwitchView : MonoBehaviour
             fill.color = new Color(fill.color.r, fill.color.g, fill.color.b, fillAlpha);
             carSeat.interactable = true;
             heatImage.SetActive(true);
+            backpack.interactable = false;
         }
         else
         {
@@ -40,6 +42,7 @@ public class SwitchView : MonoBehaviour
             fill.color = new Color(fill.color.r, fill.color.g, fill.color.b, 0f);
             carSeat.interactable = false;
             heatImage.SetActive(false);
+            backpack.interactable = true;
         }
     }
 

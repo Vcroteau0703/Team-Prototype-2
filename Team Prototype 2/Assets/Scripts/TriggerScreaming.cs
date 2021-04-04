@@ -9,8 +9,10 @@ public class TriggerScreaming : MonoBehaviour
     AudioSource audioSource;
     public GameObject cop;
     public Animator robo;
-    float timer = 2f;
+    float timer = 10f;
     public string roboEmote = "happy";
+    public SwitchView switchView;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,7 @@ public class TriggerScreaming : MonoBehaviour
         timer -= Time.deltaTime;
         if(timer <= 0 && slider.value != slider.maxValue)
         {
-            timer = 2f;
+            timer = 1f;
             slider.value -= 5;
         }
         if(slider.value >= slider.maxValue && roboEmote != "supermad")
@@ -33,7 +35,10 @@ public class TriggerScreaming : MonoBehaviour
             robo.SetBool("supermad", true);
             audioSource.Play();
             cop.SetActive(true);
-
+            if (!switchView.frontView.activeInHierarchy)
+            {
+                switchView.SwitchViews();
+            }
         }
         if(slider.maxValue > slider.value && slider.value >= 100 && roboEmote != "mad")
         {
