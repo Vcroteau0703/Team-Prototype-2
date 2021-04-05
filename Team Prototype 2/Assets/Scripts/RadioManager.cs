@@ -16,6 +16,8 @@ public class RadioManager : MonoBehaviour
     public Text peaceSongText;
     public Text annoySongText;
 
+    public Slider stressSlider;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,9 +54,11 @@ public class RadioManager : MonoBehaviour
         {
             case 0:
                 stationIDs = 1;
+                stressSlider.value += 20;
                 break;
             case 1:
                 stationIDs = 0;
+                stressSlider.value -= 5;
                 break;
         }
 
