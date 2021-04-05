@@ -476,7 +476,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 918d0dfaaff865644b7db6d3a4638fc4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0ebfd3818cd2e4c47b4cdf12de6abdd0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2049,6 +2049,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0539ecfdc005459488261d4833204a81, type: 3}
+--- !u!1 &580246918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6919636303102271040, guid: 0539ecfdc005459488261d4833204a81,
+    type: 3}
+  m_PrefabInstance: {fileID: 580246917}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &634012420
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,7 +2166,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9f7fac1aa04ca62459f4453ba5afceb2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a5a991f06400274da111dd475ed1fac, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3746,7 +3752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 571267553}
   gameUI: {fileID: 1406774706}
-  radio: {fileID: 0}
+  radio: {fileID: 580246918}
 --- !u!4 &1444611032 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6857292029877462895, guid: 928d4a936ca7bd64ea1631e46977dbf5,
@@ -4341,7 +4347,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 580246917}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 580246918}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4b7803c41629584da442075a8e5e35f, type: 3}
